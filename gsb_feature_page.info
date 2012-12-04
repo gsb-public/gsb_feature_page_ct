@@ -10,6 +10,7 @@ dependencies[] = defaultconfig
 dependencies[] = features
 dependencies[] = strongarm
 dependencies[] = text
+dependencies[] = gsb_section_autoconfig
 datestamp = 1354572923
 features[ctools][] = strongarm:strongarm:1
 features[defaultconfig][] = strongarm:panelizer_defaults_node_gsb_page
