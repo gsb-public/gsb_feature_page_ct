@@ -1,0 +1,9 @@
+<?php
+
+/**
+ * Implements hook_install().
+ */
+function gsb_feature_page_install() {
+  gsb_section_autoconfig_add_manage_node_type("gsb_page");
+}
+
