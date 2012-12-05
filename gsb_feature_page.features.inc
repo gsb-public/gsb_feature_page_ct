@@ -20,7 +20,7 @@ function gsb_feature_page_ctools_plugin_api() {
 function gsb_feature_page_node_info() {
   $items = array(
     'gsb_page' => array(
-      'name' => t('GSB Public Page'),
+      'name' => t('Page'),
       'base' => 'node_content',
       'description' => t('The GSB Public Page content type is used for any pages on the GSB Public web site.'),
       'has_title' => '1',
