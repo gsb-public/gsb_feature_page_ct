@@ -1,13 +1,13 @@
 <?php
 /**
  * @file
- * gsb_feature_page.panelizer.inc
+ * gsb_feature_page_ct.panelizer.inc
  */
 
 /**
  * Implements hook_panelizer_defaults().
  */
-function gsb_feature_page_panelizer_defaults() {
+function gsb_feature_page_ct_panelizer_defaults() {
   $export = array();
 
   $panelizer = new stdClass();

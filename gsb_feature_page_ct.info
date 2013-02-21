@@ -1,10 +1,10 @@
-name = GSB Feature Page
+name = GSB Feature Page Content Type
 description = The feature for creating the GSB Page content type
 core = 7.x
 package = GSB
 php = 5.2.4
 version = 7.x-1.0-beta1
-project = gsb_feature_page
+project = gsb_feature_page_ct
 dependencies[] = ctools
 dependencies[] = defaultconfig
 dependencies[] = email

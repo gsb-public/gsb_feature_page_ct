@@ -1,13 +1,13 @@
 <?php
 /**
  * @file
- * gsb_feature_page.features.field.inc
+ * gsb_feature_page_ct.features.field.inc
  */
 
 /**
  * Implements hook_field_default_fields().
  */
-function gsb_feature_page_field_default_fields() {
+function gsb_feature_page_ct_field_default_fields() {
   $fields = array();
 
   // Exported field: 'node-gsb_page-body'.
