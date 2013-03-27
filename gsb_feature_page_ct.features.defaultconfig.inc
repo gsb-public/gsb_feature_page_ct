@@ -279,7 +279,7 @@ function gsb_feature_page_ct_defaultconfig_strongarm() {
     'entity_field_extra-file:file' => 'entity_field_extra-file:file',
     'entity_field_extra-taxonomy_term:description' => 0,
     'entity_field_extra-user:summary' => 'entity_field_extra-user:summary',
-    'custom-custom' => 0,
+    'custom-custom' => 'custom-custom',
     'block-apps-manage_apps__panopoly' => 0,
     'block-apps-manage_apps__panopoly_apps' => 0,
     'block-facetapi-1Cpx6naJU4Y3YvKVc0vcLK7Yo0ahaN0l' => 0,
@@ -355,7 +355,7 @@ function gsb_feature_page_ct_defaultconfig_strongarm() {
     'other' => 'other',
     'token' => 0,
     'entity_form_field' => 0,
-    'custom' => 0,
+    'custom' => 'custom',
     'block' => 0,
   );
   $export['panels_page_default'] = $strongarm;
