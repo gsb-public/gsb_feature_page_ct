@@ -20,7 +20,7 @@ function gsb_feature_page_ct_panelizer_defaults() {
   $panelizer->no_blocks = FALSE;
   $panelizer->css_id = '';
   $panelizer->css = '';
-  $panelizer->pipeline = 'ipe';
+  $panelizer->pipeline = 'standard';
   $panelizer->contexts = array();
   $panelizer->relationships = array();
   $panelizer->access = array();
@@ -41,11 +41,11 @@ function gsb_feature_page_ct_panelizer_defaults() {
     $pane->pid = 'new-1';
     $pane->panel = 'center';
     $pane->type = 'entity_field';
-    $pane->subtype = 'node:body';
+    $pane->subtype = 'node:field_body';
     $pane->shown = TRUE;
     $pane->access = array();
     $pane->configuration = array(
-      'label' => 'hidden',
+      'label' => 'above',
       'formatter' => 'text_default',
       'delta_limit' => 0,
       'delta_offset' => '0',
@@ -63,6 +63,30 @@ function gsb_feature_page_ct_panelizer_defaults() {
     $display->panels['center'][0] = 'new-1';
     $pane = new stdClass();
     $pane->pid = 'new-2';
+    $pane->panel = 'center';
+    $pane->type = 'entity_field';
+    $pane->subtype = 'node:field_editorial_summary';
+    $pane->shown = TRUE;
+    $pane->access = array();
+    $pane->configuration = array(
+      'label' => 'above',
+      'formatter' => 'text_default',
+      'delta_limit' => 0,
+      'delta_offset' => '0',
+      'delta_reversed' => FALSE,
+      'formatter_settings' => array(),
+      'context' => 'panelizer',
+    );
+    $pane->cache = array();
+    $pane->style = array();
+    $pane->css = array();
+    $pane->extras = array();
+    $pane->position = 0;
+    $pane->locks = array();
+    $display->content['new-2'] = $pane;
+    $display->panels['center'][1] = 'new-2';
+    $pane = new stdClass();
+    $pane->pid = 'new-3';
     $pane->panel = 'center';
     $pane->type = 'node_links';
     $pane->subtype = 'node_links';
@@ -82,12 +106,12 @@ function gsb_feature_page_ct_panelizer_defaults() {
       'css_class' => 'link-wrapper',
     );
     $pane->extras = array();
-    $pane->position = 1;
+    $pane->position = 0;
     $pane->locks = array();
-    $display->content['new-2'] = $pane;
-    $display->panels['center'][1] = 'new-2';
+    $display->content['new-3'] = $pane;
+    $display->panels['center'][2] = 'new-3';
   $display->hide_title = PANELS_TITLE_FIXED;
-  $display->title_pane = 'new-1';
+  $display->title_pane = 'new-3';
   $panelizer->display = $display;
   $export['node:gsb_page:default'] = $panelizer;
 
