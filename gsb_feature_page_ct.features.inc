@@ -26,7 +26,7 @@ function gsb_feature_page_ct_node_info() {
     'gsb_page' => array(
       'name' => t('Page'),
       'base' => 'node_content',
-      'description' => t('The GSB Public Page content type is used for any pages on the GSB Public web site.'),
+      'description' => t('Add a page to the site.'),
       'has_title' => '1',
       'title_label' => t('Title'),
       'help' => '',
