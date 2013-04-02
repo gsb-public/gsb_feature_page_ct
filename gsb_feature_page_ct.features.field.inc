@@ -10,8 +10,8 @@
 function gsb_feature_page_ct_field_default_fields() {
   $fields = array();
 
-  // Exported field: 'node-gsb_page-body'.
-  $fields['node-gsb_page-body'] = array(
+  // Exported field: 'node-page-body'.
+  $fields['node-page-body'] = array(
     'field_config' => array(
       'active' => '1',
       'cardinality' => '1',
@@ -40,7 +40,7 @@ function gsb_feature_page_ct_field_default_fields() {
       'type' => 'text_with_summary',
     ),
     'field_instance' => array(
-      'bundle' => 'gsb_page',
+      'bundle' => 'page',
       'default_value' => NULL,
       'deleted' => '0',
       'description' => '',
@@ -89,8 +89,8 @@ function gsb_feature_page_ct_field_default_fields() {
     ),
   );
 
-  // Exported field: 'node-gsb_page-field_body'.
-  $fields['node-gsb_page-field_body'] = array(
+  // Exported field: 'node-page-field_body'.
+  $fields['node-page-field_body'] = array(
     'field_config' => array(
       'active' => '1',
       'cardinality' => '1',
@@ -117,7 +117,7 @@ function gsb_feature_page_ct_field_default_fields() {
       'type' => 'text_long',
     ),
     'field_instance' => array(
-      'bundle' => 'gsb_page',
+      'bundle' => 'page',
       'default_value' => NULL,
       'deleted' => '0',
       'description' => '',
@@ -183,8 +183,8 @@ function gsb_feature_page_ct_field_default_fields() {
     ),
   );
 
-  // Exported field: 'node-gsb_page-field_editorial_summary'.
-  $fields['node-gsb_page-field_editorial_summary'] = array(
+  // Exported field: 'node-page-field_editorial_summary'.
+  $fields['node-page-field_editorial_summary'] = array(
     'field_config' => array(
       'active' => '1',
       'cardinality' => '1',
@@ -211,7 +211,7 @@ function gsb_feature_page_ct_field_default_fields() {
       'type' => 'text_long',
     ),
     'field_instance' => array(
-      'bundle' => 'gsb_page',
+      'bundle' => 'page',
       'default_value' => NULL,
       'deleted' => '0',
       'description' => '',

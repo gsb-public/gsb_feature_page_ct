@@ -23,7 +23,7 @@ function gsb_feature_page_ct_ctools_plugin_api() {
  */
 function gsb_feature_page_ct_node_info() {
   $items = array(
-    'gsb_page' => array(
+    'page' => array(
       'name' => t('Page'),
       'base' => 'node_content',
       'description' => t('Add a page to the site.'),

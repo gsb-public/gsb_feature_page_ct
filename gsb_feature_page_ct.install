@@ -4,5 +4,5 @@
  * Implements hook_install().
  */
 function gsb_feature_page_ct_install() {
-  gsb_section_autoconfig_add_manage_node_type("gsb_page");
+  gsb_section_autoconfig_add_manage_node_type("page");
 }

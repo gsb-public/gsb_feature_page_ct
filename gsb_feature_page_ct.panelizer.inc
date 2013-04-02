@@ -13,10 +13,10 @@ function gsb_feature_page_ct_panelizer_defaults() {
   $panelizer = new stdClass();
   $panelizer->disabled = FALSE; /* Edit this to true to make a default panelizer disabled initially */
   $panelizer->api_version = 1;
-  $panelizer->name = 'node:gsb_page:default';
+  $panelizer->name = 'node:page:default';
   $panelizer->title = 'Default';
   $panelizer->panelizer_type = 'node';
-  $panelizer->panelizer_key = 'gsb_page';
+  $panelizer->panelizer_key = 'page';
   $panelizer->no_blocks = FALSE;
   $panelizer->css_id = '';
   $panelizer->css = '';
@@ -89,7 +89,7 @@ function gsb_feature_page_ct_panelizer_defaults() {
   $display->hide_title = PANELS_TITLE_FIXED;
   $display->title_pane = 'new-1';
   $panelizer->display = $display;
-  $export['node:gsb_page:default'] = $panelizer;
+  $export['node:page:default'] = $panelizer;
 
   return $export;
 }
