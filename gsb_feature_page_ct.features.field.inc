@@ -68,7 +68,7 @@ function gsb_feature_page_ct_field_default_fields() {
           'label' => 'above',
           'settings' => array(),
           'type' => 'hidden',
-          'weight' => 0,
+          'weight' => '6',
         ),
         'tiny' => array(
           'label' => 'above',
@@ -162,10 +162,14 @@ function gsb_feature_page_ct_field_default_fields() {
           'weight' => 0,
         ),
         'teaser' => array(
-          'label' => 'above',
-          'settings' => array(),
-          'type' => 'hidden',
-          'weight' => 0,
+          'label' => 'hidden',
+          'module' => 'text',
+          'settings' => array(
+            'conditions' => array(),
+            'trim_length' => 600,
+          ),
+          'type' => 'text_trimmed',
+          'weight' => '3',
         ),
         'tiny' => array(
           'label' => 'above',
