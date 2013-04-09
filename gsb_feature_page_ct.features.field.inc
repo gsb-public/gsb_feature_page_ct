@@ -44,13 +44,13 @@ function gsb_feature_page_ct_field_default_fields() {
       'description' => '',
       'display' => array(
         'default' => array(
-          'label' => 'above',
+          'label' => 'hidden',
           'module' => 'text',
           'settings' => array(
             'conditions' => array(),
           ),
           'type' => 'text_default',
-          'weight' => 2,
+          'weight' => '2',
         ),
         'featured' => array(
           'label' => 'above',
@@ -141,13 +141,13 @@ function gsb_feature_page_ct_field_default_fields() {
       'description' => '',
       'display' => array(
         'default' => array(
-          'label' => 'above',
+          'label' => 'hidden',
           'module' => 'text',
           'settings' => array(
             'conditions' => array(),
           ),
           'type' => 'text_default',
-          'weight' => 1,
+          'weight' => '1',
         ),
         'featured' => array(
           'label' => 'above',
