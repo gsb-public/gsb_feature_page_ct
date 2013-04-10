@@ -53,13 +53,13 @@ function gsb_feature_page_ct_strongarm() {
     'extra_fields' => array(
       'form' => array(
         'title' => array(
-          'weight' => '0',
+          'weight' => '1',
         ),
         'path' => array(
-          'weight' => '3',
+          'weight' => '4',
         ),
         'workbench_access' => array(
-          'weight' => '4',
+          'weight' => '0',
         ),
         'metatags' => array(
           'weight' => '5',

@@ -101,7 +101,7 @@ function gsb_feature_page_ct_field_default_fields() {
           'rows' => '5',
         ),
         'type' => 'text_textarea',
-        'weight' => '2',
+        'weight' => '3',
       ),
       'workbench_access_field' => 0,
     ),
@@ -182,7 +182,7 @@ function gsb_feature_page_ct_field_default_fields() {
       'entity_type' => 'node',
       'field_name' => 'field_editorial_summary',
       'label' => 'Editorial Summary',
-      'required' => 1,
+      'required' => 0,
       'settings' => array(
         'linkit' => array(
           'enable' => 0,
@@ -202,7 +202,7 @@ function gsb_feature_page_ct_field_default_fields() {
           'rows' => '3',
         ),
         'type' => 'text_textarea',
-        'weight' => '1',
+        'weight' => '2',
       ),
       'workbench_access_field' => 0,
     ),
