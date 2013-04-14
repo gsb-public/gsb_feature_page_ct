@@ -9,7 +9,6 @@ dependencies[] = ctools
 dependencies[] = defaultconfig
 dependencies[] = ds
 dependencies[] = email
-dependencies[] = entity_view_mode
 dependencies[] = features
 dependencies[] = field_group
 dependencies[] = gsb_section_autoconfig
