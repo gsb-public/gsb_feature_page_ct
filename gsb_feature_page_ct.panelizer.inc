@@ -41,7 +41,7 @@ function gsb_feature_page_ct_panelizer_defaults() {
     $pane->pid = 'new-1';
     $pane->panel = 'center';
     $pane->type = 'entity_field';
-    $pane->subtype = 'node:body';
+    $pane->subtype = 'node:field_body';
     $pane->shown = TRUE;
     $pane->access = array();
     $pane->configuration = array(
