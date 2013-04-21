@@ -40,3 +40,5 @@ features[variable][] = panels_page_allowed_layouts
 features[variable][] = panels_page_allowed_types
 features[variable][] = panels_page_default
 features[variable][] = pathauto_node_page_pattern
+features_exclude[field][node-page-field_body] = node-page-field_body
+features_exclude[field][node-page-field_editorial_summary] = node-page-field_editorial_summary
