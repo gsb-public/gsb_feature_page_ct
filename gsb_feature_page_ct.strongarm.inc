@@ -49,6 +49,15 @@ function gsb_feature_page_ct_strongarm() {
       'revision' => array(
         'custom_settings' => FALSE,
       ),
+      'business_insight' => array(
+        'custom_settings' => FALSE,
+      ),
+      'megamenu' => array(
+        'custom_settings' => FALSE,
+      ),
+      'people_fpp' => array(
+        'custom_settings' => FALSE,
+      ),
     ),
     'extra_fields' => array(
       'form' => array(
@@ -56,13 +65,13 @@ function gsb_feature_page_ct_strongarm() {
           'weight' => '1',
         ),
         'path' => array(
-          'weight' => '4',
+          'weight' => '5',
         ),
         'workbench_access' => array(
           'weight' => '0',
         ),
         'metatags' => array(
-          'weight' => '5',
+          'weight' => '6',
         ),
       ),
       'display' => array(),
