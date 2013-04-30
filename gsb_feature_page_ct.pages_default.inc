@@ -128,6 +128,42 @@ function gsb_feature_page_ct_default_page_manager_handlers() {
     $pane->locks = array();
     $display->content['new-2'] = $pane;
     $display->panels['quicklinks'][0] = 'new-2';
+    $pane = new stdClass();
+    $pane->pid = 'new-3';
+    $pane->panel = 'quicklinks';
+    $pane->type = 'media_toolkit';
+    $pane->subtype = 'media_toolkit';
+    $pane->shown = TRUE;
+    $pane->access = array(
+      'plugins' => array(
+        0 => array(
+          'name' => 'entity_field_value:node:news:field_news_type',
+          'settings' => array(
+            'field_news_type' => array(
+              'und' => array(
+                0 => array(
+                  'value' => 'press-release',
+                ),
+              ),
+            ),
+            'field_news_type_value' => 'press-release',
+          ),
+          'context' => 'argument_entity_id:node_1',
+          'not' => FALSE,
+        ),
+      ),
+    );
+    $pane->configuration = array();
+    $pane->cache = array();
+    $pane->style = array(
+      'settings' => NULL,
+    );
+    $pane->css = array();
+    $pane->extras = array();
+    $pane->position = 1;
+    $pane->locks = array();
+    $display->content['new-3'] = $pane;
+    $display->panels['quicklinks'][1] = 'new-3';
   $display->hide_title = PANELS_TITLE_FIXED;
   $display->title_pane = 'new-1';
   $handler->conf['display'] = $display;
