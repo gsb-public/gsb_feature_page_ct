@@ -168,7 +168,7 @@ function gsb_feature_page_ct_field_default_field_instances() {
         'module' => 'text',
         'settings' => array(
           'conditions' => array(),
-          'trim_length' => 600,
+          'trim_length' => 150,
         ),
         'type' => 'text_trimmed',
         'weight' => 3,

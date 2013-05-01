@@ -21,6 +21,18 @@ function gsb_feature_page_ct_ds_field_settings_info() {
       'weight' => '2',
       'label' => 'hidden',
       'format' => 'default',
+      'formatter_settings' => array(
+        'link' => '1',
+        'wrapper' => 'h2',
+        'class' => '',
+        'ft' => array(),
+        'conditions' => array(),
+      ),
+    ),
+    'field_editorial_summary' => array(
+      'formatter_settings' => array(
+        'ft' => array(),
+      ),
     ),
   );
   $export['node|page|teaser'] = $ds_fieldsetting;
@@ -44,13 +56,11 @@ function gsb_feature_page_ct_ds_layout_settings_info() {
   $ds_layout->settings = array(
     'regions' => array(
       'ds_content' => array(
-        0 => 'group_wrapper_teaser',
-        1 => 'title',
-        2 => 'field_editorial_summary',
+        0 => 'title',
+        1 => 'field_editorial_summary',
       ),
     ),
     'fields' => array(
-      'group_wrapper_teaser' => 'ds_content',
       'title' => 'ds_content',
       'field_editorial_summary' => 'ds_content',
     ),
