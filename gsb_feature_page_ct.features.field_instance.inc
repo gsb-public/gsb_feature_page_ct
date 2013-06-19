@@ -248,7 +248,7 @@ function gsb_feature_page_ct_field_default_field_instances() {
     'entity_type' => 'node',
     'field_name' => 'field_pathauto_title_alias',
     'label' => 'URL Alias',
-    'required' => 1,
+    'required' => 0,
     'settings' => array(
       'user_register_form' => FALSE,
     ),
