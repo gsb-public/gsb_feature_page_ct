@@ -58,6 +58,15 @@ function gsb_feature_page_ct_strongarm() {
       'people_fpp' => array(
         'custom_settings' => FALSE,
       ),
+      'event_listing' => array(
+        'custom_settings' => FALSE,
+      ),
+      'event_upcoming' => array(
+        'custom_settings' => FALSE,
+      ),
+      'media_contact' => array(
+        'custom_settings' => FALSE,
+      ),
     ),
     'extra_fields' => array(
       'form' => array(

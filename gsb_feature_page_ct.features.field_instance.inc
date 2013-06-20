@@ -218,11 +218,8 @@ function gsb_feature_page_ct_field_default_field_instances() {
     'display' => array(
       'default' => array(
         'label' => 'above',
-        'module' => 'pathauto_title_alias',
-        'settings' => array(
-          'conditions' => array(),
-        ),
-        'type' => 'pathauto_title_alias_default',
+        'settings' => array(),
+        'type' => 'hidden',
         'weight' => 4,
       ),
       'featured' => array(
