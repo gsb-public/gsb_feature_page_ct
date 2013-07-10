@@ -50,7 +50,7 @@ function gsb_feature_page_ct_panelizer_defaults() {
   $display->panels = array();
     $pane = new stdClass();
     $pane->pid = 'new-1';
-    $pane->panel = 'fullheader';
+    $pane->panel = 'mainbottom';
     $pane->type = 'entity_field';
     $pane->subtype = 'node:field_addthis';
     $pane->shown = TRUE;
@@ -93,7 +93,7 @@ function gsb_feature_page_ct_panelizer_defaults() {
     $pane->position = 0;
     $pane->locks = array();
     $display->content['new-1'] = $pane;
-    $display->panels['fullheader'][0] = 'new-1';
+    $display->panels['mainbottom'][0] = 'new-1';
     $pane = new stdClass();
     $pane->pid = 'new-2';
     $pane->panel = 'maintop';
