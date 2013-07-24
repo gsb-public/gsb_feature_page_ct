@@ -1096,7 +1096,7 @@ function gsb_feature_page_ct_strongarm() {
     'block-gsb_public_custom_blocks-gpcb_about_campus' => 'block-gsb_public_custom_blocks-gpcb_about_campus',
     'block-block-2' => 0,
     'block-block-3' => 0,
-    'block-gsb_public_custom_blocks-gpcb_weather_widget' => 'block-gsb_public_custom_blocks-gpcb_weather_widget',
+    'block-gsb_public_custom_blocks-gpcb_weather_widget' => 'block-gsb_public_custom_blocks-gpcb_weather_widget',    
     'block-addthis-addthis_block' => 0,
     'block-apachesolr_search-mlt-001' => 0,
     'block-apachesolr_search-sort' => 0,
