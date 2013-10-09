@@ -46,6 +46,7 @@ features[variable][] = panelizer_node:page_allowed_types_default
 features[variable][] = panels_page_allowed_types
 features[variable][] = panels_page_default
 features[variable][] = pathauto_node_page_pattern
+features[variable][] = workbench_access_node_type_page
 features_exclude[field][node-page-field_body] = node-page-field_body
 features_exclude[field][node-page-field_editorial_summary] = node-page-field_editorial_summary
 features_exclude[field][node-page-field_addthis] = node-page-field_addthis
