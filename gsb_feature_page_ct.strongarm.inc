@@ -1223,6 +1223,7 @@ function gsb_feature_page_ct_strongarm() {
   $strongarm->value = array(
     'entity_field' => 'entity_field',
     'entity_field_extra' => 'entity_field_extra',
+    'block' => 'block',
     'entity_view' => 'entity_view',
     'fieldable_panels_pane' => 'fieldable_panels_pane',
     'views_panes' => 'views_panes',
@@ -1230,7 +1231,6 @@ function gsb_feature_page_ct_strongarm() {
     'token' => 0,
     'entity_form_field' => 0,
     'custom' => 0,
-    'block' => 0,
     'menu_tree' => 0,
     'panels_mini' => 0,
   );
