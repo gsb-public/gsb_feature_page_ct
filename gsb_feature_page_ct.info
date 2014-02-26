@@ -33,7 +33,6 @@ features[field_instance][] = node-page-field_editorial_summary
 features[field_instance][] = node-page-field_pathauto_title_alias
 features[field_instance][] = node-page-field_search_field
 features[node][] = page
-features[page_manager_handlers][] = node_view_news_ct
 features[panelizer_defaults][] = node:page:default
 features[variable][] = field_bundle_settings_node__page
 features[variable][] = menu_parent_page
