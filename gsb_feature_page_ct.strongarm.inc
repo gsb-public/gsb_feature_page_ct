@@ -1103,7 +1103,6 @@ function gsb_feature_page_ct_strongarm() {
     'block-addthis-addthis_block' => 0,
     'block-apachesolr_search-mlt-001' => 0,
     'block-apachesolr_search-sort' => 0,
-    'block-apps-manage_apps__panopoly' => 0,
     'block-diff-inline' => 0,
     'block-gsb_feature_faculty_display-az_list' => 0,
     'block-gsb_public_custom_blocks-gpcb_enews_signup' => 0,
@@ -1215,7 +1214,6 @@ function gsb_feature_page_ct_strongarm() {
     'views_panes-research_paper_filters-research_paper_list' => 'views_panes-research_paper_filters-research_paper_list',
     'views_panes-research_paper_filters-research_paper_by_id_or_tag' => 'views_panes-research_paper_filters-research_paper_by_id_or_tag',
     'views_panes-research_papers-panel_pane_1' => 'views_panes-research_papers-panel_pane_1',
-    'views_panes-panopoly_taxonomy-taxonomy_content' => 0,
   );
   $export['panels_page_allowed_types'] = $strongarm;
 
