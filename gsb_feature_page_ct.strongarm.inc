@@ -103,8 +103,9 @@ function gsb_feature_page_ct_strongarm() {
   $strongarm->api_version = 1;
   $strongarm->name = 'node_options_page';
   $strongarm->value = array(
-    0 => 'moderation',
-    1 => 'revision',
+    0 => 'force_pathauto',
+    1 => 'moderation',
+    2 => 'revision',
   );
   $export['node_options_page'] = $strongarm;
 
@@ -140,6 +141,11 @@ function gsb_feature_page_ct_strongarm() {
         'choice' => 0,
       ),
       'teaser' => array(
+        'status' => 0,
+        'default' => 0,
+        'choice' => 0,
+      ),
+      'ical' => array(
         'status' => 0,
         'default' => 0,
         'choice' => 0,
