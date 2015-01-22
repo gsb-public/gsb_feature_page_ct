@@ -10,66 +10,6 @@
 function gsb_feature_page_ct_field_default_field_instances() {
   $field_instances = array();
 
-  // Exported field_instance: 'node-page-field_addthis'
-  $field_instances['node-page-field_addthis'] = array(
-    'bundle' => 'page',
-    'default_value' => NULL,
-    'deleted' => 0,
-    'description' => '',
-    'display' => array(
-      'default' => array(
-        'label' => 'hidden',
-        'settings' => array(),
-        'type' => 'hidden',
-        'weight' => 1,
-      ),
-      'featured' => array(
-        'label' => 'above',
-        'settings' => array(),
-        'type' => 'hidden',
-        'weight' => 0,
-      ),
-      'ical' => array(
-        'label' => 'above',
-        'settings' => array(),
-        'type' => 'hidden',
-        'weight' => 0,
-      ),
-      'teaser' => array(
-        'label' => 'above',
-        'settings' => array(),
-        'type' => 'hidden',
-        'weight' => 0,
-      ),
-      'tiny' => array(
-        'label' => 'above',
-        'settings' => array(),
-        'type' => 'hidden',
-        'weight' => 0,
-      ),
-    ),
-    'ds_extras_field_template' => '',
-    'entity_type' => 'node',
-    'field_name' => 'field_addthis',
-    'label' => 'AddThis',
-    'required' => FALSE,
-    'settings' => array(
-      'custom_add_another' => '',
-      'custom_remove' => '',
-      'user_register_form' => FALSE,
-    ),
-    'widget' => array(
-      'active' => 0,
-      'module' => 'addthis',
-      'settings' => array(
-        'maxlength_js_label' => '',
-      ),
-      'type' => 'addthis_button_widget',
-      'weight' => 6,
-    ),
-    'workbench_access_field' => 0,
-  );
-
   // Exported field_instance: 'node-page-field_body'
   $field_instances['node-page-field_body'] = array(
     'bundle' => 'page',
@@ -425,7 +365,6 @@ function gsb_feature_page_ct_field_default_field_instances() {
 
   // Translatables
   // Included for use with string extractors like potx.
-  t('AddThis');
   t('Body');
   t('Editorial Summary');
   t('Search field');
