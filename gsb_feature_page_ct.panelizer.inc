@@ -46,10 +46,11 @@ function gsb_feature_page_ct_panelizer_defaults() {
   );
   $display->cache = array();
   $display->title = '%node:title';
+  $display->uuid = 'e3f1cca5-47ce-455a-8638-b31cd2d1535c';
   $display->content = array();
   $display->panels = array();
     $pane = new stdClass();
-    $pane->pid = 'new-1';
+    $pane->pid = 'new-c0bd9c6c-ac44-4a75-9229-3a3e2af2db0d';
     $pane->panel = 'maintop';
     $pane->type = 'node_content';
     $pane->subtype = 'node_content';
@@ -74,8 +75,9 @@ function gsb_feature_page_ct_panelizer_defaults() {
     $pane->extras = array();
     $pane->position = 0;
     $pane->locks = array();
-    $display->content['new-1'] = $pane;
-    $display->panels['maintop'][0] = 'new-1';
+    $pane->uuid = 'c0bd9c6c-ac44-4a75-9229-3a3e2af2db0d';
+    $display->content['new-c0bd9c6c-ac44-4a75-9229-3a3e2af2db0d'] = $pane;
+    $display->panels['maintop'][0] = 'new-c0bd9c6c-ac44-4a75-9229-3a3e2af2db0d';
   $display->hide_title = PANELS_TITLE_FIXED;
   $display->title_pane = '0';
   $panelizer->display = $display;
