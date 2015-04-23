@@ -5,3 +5,12 @@
  */
 
 include_once 'gsb_feature_page_ct.features.inc';
+
+/**
+ * Implements hook_workbench_moderation_access_alter().
+ */
+function gsb_feature_page_ct_workbench_moderation_access_alter(&$access, $op, $node) {
+  if ($op == 'view revisions' && $node->type == 'page' && user_access('view revisions')) {
+    $access = TRUE;
+  }
+}
