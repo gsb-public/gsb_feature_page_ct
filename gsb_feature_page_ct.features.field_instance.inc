@@ -291,7 +291,6 @@ function gsb_feature_page_ct_field_default_field_instances() {
       'custom_remove' => '',
       'selected_fields' => array(
         'concat_field_entity_label' => 'concat_field_entity_label',
-        'field_addthis' => 0,
         'field_body' => 'field_body',
         'field_editorial_summary' => 'field_editorial_summary',
       ),
