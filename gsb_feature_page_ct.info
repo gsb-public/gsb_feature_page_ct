@@ -47,7 +47,6 @@ features[variable][] = workbench_access_node_type_page
 features[variable][] = workbench_moderation_default_state_page
 features_exclude[field][node-page-field_body] = node-page-field_body
 features_exclude[field][node-page-field_editorial_summary] = node-page-field_editorial_summary
-features_exclude[field][node-page-field_addthis] = node-page-field_addthis
 features_exclude[field][node-page-field_search_field] = node-page-field_search_field
 features_exclude[field][node-page-field_pathauto_title_alias] = node-page-field_pathauto_title_alias
 features_exclude[field_base][field_submit] = field_submit
