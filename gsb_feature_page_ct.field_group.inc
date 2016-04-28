@@ -23,8 +23,8 @@ function gsb_feature_page_ct_field_group_info() {
     'label' => 'Hero Region',
     'weight' => '5',
     'children' => array(
-      0 => 'field_image_single_public',
-      1 => 'field_hero_region_options',
+      0 => 'field_hero_region_options',
+      1 => 'field_image_single_public',
     ),
     'format_type' => 'fieldset',
     'format_settings' => array(
