@@ -67,6 +67,108 @@ function gsb_feature_page_ct_strongarm() {
       'media_contact' => array(
         'custom_settings' => FALSE,
       ),
+      'act_project_by_criteria' => array(
+        'custom_settings' => FALSE,
+      ),
+      'act_project_listing' => array(
+        'custom_settings' => FALSE,
+      ),
+      'alumni_name' => array(
+        'custom_settings' => FALSE,
+      ),
+      'alumni_reunion_agenda_list' => array(
+        'custom_settings' => FALSE,
+      ),
+      'compact' => array(
+        'custom_settings' => FALSE,
+      ),
+      'expanded' => array(
+        'custom_settings' => FALSE,
+      ),
+      'views_content_pane' => array(
+        'custom_settings' => FALSE,
+      ),
+      'event_contacts' => array(
+        'custom_settings' => FALSE,
+      ),
+      'alumni_featured_content' => array(
+        'custom_settings' => FALSE,
+      ),
+      'idea_story_latest_stories' => array(
+        'custom_settings' => FALSE,
+      ),
+      'idea_story_related' => array(
+        'custom_settings' => FALSE,
+      ),
+      'idea_story_top_stories' => array(
+        'custom_settings' => FALSE,
+      ),
+      'insight_featured_card' => array(
+        'custom_settings' => FALSE,
+      ),
+      'news_listing' => array(
+        'custom_settings' => FALSE,
+      ),
+      'phd_job_market_candidate' => array(
+        'custom_settings' => FALSE,
+      ),
+      'field_program_ctas' => array(
+        'custom_settings' => FALSE,
+      ),
+      'field_program_curriculum' => array(
+        'custom_settings' => FALSE,
+      ),
+      'field_program_curriculum_one' => array(
+        'custom_settings' => FALSE,
+      ),
+      'field_program_curriculum_two' => array(
+        'custom_settings' => FALSE,
+      ),
+      'field_program_director' => array(
+        'custom_settings' => FALSE,
+      ),
+      'field_program_participants_desc' => array(
+        'custom_settings' => FALSE,
+      ),
+      'field_program_participants_intro' => array(
+        'custom_settings' => FALSE,
+      ),
+      'field_program_related' => array(
+        'custom_settings' => FALSE,
+      ),
+      'featured_program' => array(
+        'custom_settings' => FALSE,
+      ),
+      'program_director' => array(
+        'custom_settings' => FALSE,
+      ),
+      'faculty_leadership' => array(
+        'custom_settings' => FALSE,
+      ),
+      'faculty_one' => array(
+        'custom_settings' => FALSE,
+      ),
+      'faculty_two' => array(
+        'custom_settings' => FALSE,
+      ),
+      'field_program_faculty' => array(
+        'custom_settings' => FALSE,
+      ),
+      'guest_speakers_advisors' => array(
+        'custom_settings' => FALSE,
+      ),
+      'main_list' => array(
+        'custom_settings' => FALSE,
+      ),
+      'program_contact' => array(
+        'custom_settings' => FALSE,
+      ),
+      'program_explore_other' => array(
+        'custom_settings' => FALSE,
+      ),
+      'teaser_listing' => array(
+        'custom_settings' => FALSE,
+      ),
     ),
     'extra_fields' => array(
       'form' => array(
