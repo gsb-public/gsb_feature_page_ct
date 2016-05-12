@@ -25,6 +25,7 @@ function gsb_feature_page_ct_field_group_info() {
     'children' => array(
       0 => 'field_hero_region_options',
       1 => 'field_image_single_public',
+      2 => 'field_slideshow_slides',
     ),
     'format_type' => 'fieldset',
     'format_settings' => array(
