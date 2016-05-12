@@ -46,4 +46,13 @@ function gsb_feature_page_ct_form_node_form_alter(&$form, &$form_state) {
       ),
     ),
   );
+
+  // show/hide the slideshow field
+  $form['field_slideshow_slides']['#states'] = array(
+    'visible' => array(
+      ':input[name="field_hero_region_options[' . $language . ']"]' => array(
+        array('value' => 'slideshow'),
+      ),
+    ),
+  );
 }
