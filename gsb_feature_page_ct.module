@@ -38,9 +38,6 @@ function gsb_feature_page_ct_form_node_form_alter(&$form, &$form_state) {
   $language = $form['language']['#value'];
   unset($form['field_hero_region_options'][$language]['#options']['_none']);
 
-  $form['field_slideshow_slides'][$language][0]['field_text_slide'][$language][0]['#required'] = false;
-  $form['field_slideshow_slides'][$language][0]['field_image_single_public'][$language][0]['#required'] = false;
-
   // show/hide the image field
   $form['field_image_single_public']['#states'] = array(
     'visible' => array(
@@ -58,4 +55,48 @@ function gsb_feature_page_ct_form_node_form_alter(&$form, &$form_state) {
       ),
     ),
   );
+
+  foreach ($form['field_slideshow_slides'][$language] as $index => $data) {
+    if (is_integer($index)) {
+      $form['field_slideshow_slides'][$language][$index]['field_text_slide'][$language][0]['#required'] = false;
+      $form['field_slideshow_slides'][$language][$index]['field_image_single_public'][$language][0]['#required'] = false;
+
+      $form['field_slideshow_slides'][$language][$index]['field_text_slide']['#states'] = array(
+        'required' => array(
+          ':input[name="field_hero_region_options[' . $language . ']"]' => array(
+            array('value' => 'slideshow'),
+          ),
+        ),
+      );
+      $form['field_slideshow_slides'][$language][$index]['field_image_single_public']['#states'] = array(
+        'required' => array(
+          ':input[name="field_hero_region_options[' . $language . ']"]' => array(
+            array('value' => 'slideshow'),
+          ),
+        ),
+      );
+    }
+  }
+
+  $form['#validate'][] = 'gsb_feature_page_ct_form_validate';
+}
+
+function gsb_feature_page_ct_form_validate(&$form, &$form_state) {
+  $language = $form['language']['#value'];
+  if ($form_state['values']['field_hero_region_options'][$language][0]['value'] == 'slideshow') {
+    foreach ($form['field_slideshow_slides'][$language] as $index => $data) {
+      if (is_integer($index)) {
+        if (!empty($form_state['values']['field_slideshow_slides']['und'][$index]) && $form_state['values']['field_slideshow_slides']['und'][$index]['field_text_slide']['und'][0]['value'] == '') {
+          $field_label = $form['field_slideshow_slides'][$language]['#title'] . ' ' . $form['field_slideshow_slides'][$language][$index]['field_text_slide'][$language][0]['#title'];
+          $name = 'field_slideshow_slides][und][' . $index . '][field_text_slide][und][0][value';
+          form_set_error($name, $field_label . ' field is required.');
+        }
+        if (!empty($form_state['values']['field_slideshow_slides']['und'][$index]) && $form_state['values']['field_slideshow_slides']['und'][$index]['field_image_single_public']['und'][0]['fid'] == 0) {
+          $field_label = $form['field_slideshow_slides'][$language]['#title'] . ' ' . $form['field_slideshow_slides'][$language][$index]['field_image_single_public'][$language][0]['#title'];
+          $name = 'field_slideshow_slides][und][' . $index . '][field_image_single_public][und][0';
+          form_set_error($name, $field_label . ' field is required.');
+        }
+      }
+    }
+  }
 }
