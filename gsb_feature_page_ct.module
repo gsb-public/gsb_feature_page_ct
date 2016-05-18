@@ -38,6 +38,9 @@ function gsb_feature_page_ct_form_node_form_alter(&$form, &$form_state) {
   $language = $form['language']['#value'];
   unset($form['field_hero_region_options'][$language]['#options']['_none']);
 
+  $form['field_slideshow_slides'][$language][0]['field_text_slide'][$language][0]['#required'] = false;
+  $form['field_slideshow_slides'][$language][0]['field_image_single_public'][$language][0]['#required'] = false;
+
   // show/hide the image field
   $form['field_image_single_public']['#states'] = array(
     'visible' => array(
