@@ -148,6 +148,9 @@ function gsb_feature_page_ct_strongarm() {
       'faculty_one' => array(
         'custom_settings' => FALSE,
       ),
+      'faculty_teaching_programs' => array(
+        'custom_settings' => FALSE,
+      ),
       'faculty_two' => array(
         'custom_settings' => FALSE,
       ),
