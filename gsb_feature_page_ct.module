@@ -56,25 +56,24 @@ function gsb_feature_page_ct_form_node_form_alter(&$form, &$form_state) {
     ),
   );
 
+  // create 'required' labels Text and Image
+  $text_label = '<label for="field-text-slide">Text <span class="form-required">*</span></label>';
+  $image_label = '<label for="field-text-slide">Image <span class="form-required">*</span></label>';
+
   foreach ($form['field_slideshow_slides'][$language] as $index => $data) {
     if (is_integer($index)) {
+
+      // remove the forms required validation flags
       $form['field_slideshow_slides'][$language][$index]['field_text_slide'][$language][0]['#required'] = false;
       $form['field_slideshow_slides'][$language][$index]['field_image_single_public'][$language][0]['#required'] = false;
 
-      $form['field_slideshow_slides'][$language][$index]['field_text_slide']['#states'] = array(
-        'required' => array(
-          ':input[name="field_hero_region_options[' . $language . ']"]' => array(
-            array('value' => 'slideshow'),
-          ),
-        ),
-      );
-      $form['field_slideshow_slides'][$language][$index]['field_image_single_public']['#states'] = array(
-        'required' => array(
-          ':input[name="field_hero_region_options[' . $language . ']"]' => array(
-            array('value' => 'slideshow'),
-          ),
-        ),
-      );
+      // add the required label for Text
+      $form['field_slideshow_slides'][$language][$index]['field_text_slide'][$language][0]['#field_prefix'] = $text_label;
+      unset($form['field_slideshow_slides'][$language][$index]['field_text_slide'][$language][0]['#title']);
+
+      // add the required label for Text
+      $form['field_slideshow_slides'][$language][$index]['field_image_single_public'][$language][0]['#field_prefix'] = $image_label;
+      unset($form['field_slideshow_slides'][$language][$index]['field_image_single_public'][$language][0]['#title']);
     }
   }
 
