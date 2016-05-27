@@ -5,6 +5,9 @@ Drupal.behaviors.gsb_feature_page_ct_slideshow_slick = {
     if ($('.panels-ipe-editing').length > 0) {
       return;
     }
+    if ($('.panels-ipe-save').length > 0) {
+      return;
+    }
     $('.hero-region-slideshow-wrapper').slick({
       swipe: false,
       easing: 'slide',
