@@ -74,6 +74,11 @@ function gsb_feature_page_ct_form_node_form_alter(&$form, &$form_state) {
       // add the required label for Text
       $form['field_slideshow_slides'][$language][$index]['field_image_single_public'][$language][0]['#field_prefix'] = $image_label;
       unset($form['field_slideshow_slides'][$language][$index]['field_image_single_public'][$language][0]['#title']);
+
+      // change the help text for the slideshow image field
+      $description = $form['field_slideshow_slides'][$language][$index]['field_image_single_public'][$language][0]['#description'];
+      $description = str_replace('1140 x 640', '2800 x 800', $description);
+      $form['field_slideshow_slides'][$language][$index]['field_image_single_public'][$language][0]['#description'] = $description;
     }
   }
 
