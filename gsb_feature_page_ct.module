@@ -130,5 +130,14 @@ function gsb_feature_page_ct_page_alter(&$page) {
   if ($page['#type'] == 'page') {
     drupal_add_library('gsb_feature_page_ct', 'slick');
     drupal_add_js(drupal_get_path('module', 'gsb_feature_page_ct') . '/js/gsb_feature_page_ct_slideshow_slick.js');
+    $node = menu_get_object();
+    if ($node && $node->type == 'page') {
+        drupal_set_title($node->title);
+        $title = $page['content']['metatags']['node:page']['title']['#attached']['metatag_set_preprocess_variable'][0][2];
+        $title = str_replace($node->title, '', $title);
+        $title_parts = explode('|', $title);
+        $title = trim($title_parts[0]) . ' ' . $node->title . ' | ' . trim($title_parts[1]);
+        $page['content']['metatags']['node:page']['title']['#attached']['metatag_set_preprocess_variable'][0][2] = $title;
+    }
   }
 }
