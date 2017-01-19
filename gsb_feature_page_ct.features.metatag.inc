@@ -15,7 +15,7 @@ function gsb_feature_page_ct_metatag_export_default() {
     'instance' => 'node:page',
     'config' => array(
       'title' => array(
-        'value' => '[current-page:title] | [site:name]',
+        'value' => '[node:title] | [site:name]',
       ),
     ),
   );
