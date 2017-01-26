@@ -138,12 +138,20 @@ function gsb_feature_page_ct_page_alter(&$page) {
           $metatag_token_parts = explode('|', $metatag_token);
           $metatag_result      = str_replace('[node:title]', $node->title, $metatag_token_parts[0]);
           $find_current_page   = strpos($metatag_result, '[current-page:title]');
-          if ($find_current_page == true) {
+          if ($find_current_page !== false) {
             $metatag_result    = str_replace('[current-page:title]', $node->title, $metatag_token_parts[0]);
           }
           $title = $page['content']['metatags']['node:page']['title']['#attached']['metatag_set_preprocess_variable'][0][2];
           $title_parts = explode('|', $title);
           $title = trim($metatag_result) .' | ' . trim($title_parts[1]);
+          $page['content']['metatags']['node:page']['title']['#attached']['metatag_set_preprocess_variable'][0][2] = $title;
+        }
+        else
+        {
+          $title = $page['content']['metatags']['node:page']['title']['#attached']['metatag_set_preprocess_variable'][0][2];
+          $title_parts = explode('|', $title);
+          $title = str_replace($node->title, '', $title);
+          $title = trim($title_parts[0]) . ' ' . $node->title . ' | ' . trim($title_parts[1]);
           $page['content']['metatags']['node:page']['title']['#attached']['metatag_set_preprocess_variable'][0][2] = $title;
         }
     }
