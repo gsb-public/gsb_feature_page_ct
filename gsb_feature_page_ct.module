@@ -149,8 +149,8 @@ function gsb_feature_page_ct_page_alter(&$page) {
         else
         {
           $title = $page['content']['metatags']['node:page']['title']['#attached']['metatag_set_preprocess_variable'][0][2];
-          $title_parts = explode('|', $title);
           $title = str_replace($node->title, '', $title);
+          $title_parts = explode('|', $title);
           $title = trim($title_parts[0]) . ' ' . $node->title . ' | ' . trim($title_parts[1]);
           $page['content']['metatags']['node:page']['title']['#attached']['metatag_set_preprocess_variable'][0][2] = $title;
         }
