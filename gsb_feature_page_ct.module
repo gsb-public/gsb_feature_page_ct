@@ -133,7 +133,7 @@ function gsb_feature_page_ct_page_alter(&$page) {
     $node = menu_get_object();
     if ($node && $node->type == 'page') {
         drupal_set_title($node->title);
-        $metatag_token = $node->metatags['und']['title']['value'];
+        $metatag_token = empty($node->metatags['und']['title']['value']) ? "" : $node->metatags['und']['title']['value'];
         if ($metatag_token != "") {
           $metatag_token_parts = explode('|', $metatag_token);
           $metatag_result      = str_replace('[node:title]', $node->title, $metatag_token_parts[0]);
