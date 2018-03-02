@@ -13,6 +13,27 @@ function gsb_feature_page_ct_strongarm() {
   $strongarm = new stdClass();
   $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
   $strongarm->api_version = 1;
+  $strongarm->name = 'diff_enable_revisions_page_node_page';
+  $strongarm->value = 1;
+  $export['diff_enable_revisions_page_node_page'] = $strongarm;
+
+  $strongarm = new stdClass();
+  $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
+  $strongarm->api_version = 1;
+  $strongarm->name = 'diff_show_preview_changes_node_page';
+  $strongarm->value = 1;
+  $export['diff_show_preview_changes_node_page'] = $strongarm;
+
+  $strongarm = new stdClass();
+  $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
+  $strongarm->api_version = 1;
+  $strongarm->name = 'diff_view_mode_preview_node_page';
+  $strongarm->value = 'full';
+  $export['diff_view_mode_preview_node_page'] = $strongarm;
+
+  $strongarm = new stdClass();
+  $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
+  $strongarm->api_version = 1;
   $strongarm->name = 'field_bundle_settings_node__page';
   $strongarm->value = array(
     'view_modes' => array(
@@ -278,9 +299,43 @@ function gsb_feature_page_ct_strongarm() {
   $strongarm = new stdClass();
   $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
   $strongarm->api_version = 1;
+  $strongarm->name = 'panelizer_node:page_allowed_layouts';
+  $strongarm->value = 'O:22:"panels_allowed_layouts":4:{s:9:"allow_new";b:1;s:11:"module_name";s:19:"panelizer_node:page";s:23:"allowed_layout_settings";a:47:{s:8:"flexible";b:0;s:14:"twocol_stacked";b:0;s:13:"twocol_bricks";b:0;s:6:"twocol";b:0;s:25:"threecol_33_34_33_stacked";b:0;s:17:"threecol_33_34_33";b:0;s:25:"threecol_25_50_25_stacked";b:0;s:17:"threecol_25_50_25";b:0;s:6:"onecol";b:0;s:6:"whelan";b:0;s:12:"webb_flipped";b:0;s:4:"webb";b:0;s:14:"taylor_flipped";b:0;s:6:"taylor";b:0;s:12:"sutro_double";b:0;s:5:"sutro";b:0;s:13:"selby_flipped";b:0;s:5:"selby";b:0;s:17:"sanderson_flipped";b:0;s:9:"sanderson";b:0;s:5:"rolph";b:0;s:4:"pond";b:0;s:6:"phelan";b:0;s:15:"moscone_flipped";b:0;s:7:"moscone";b:0;s:8:"mccoppin";b:0;s:15:"hewston_flipped";b:0;s:7:"hewston";b:0;s:6:"harris";b:0;s:5:"geary";b:0;s:12:"burr_flipped";b:0;s:4:"burr";b:0;s:22:"bryant_flipped_flipped";b:0;s:6:"bryant";b:0;s:5:"brown";b:0;s:15:"brenham_flipped";b:0;s:7:"brenham";b:0;s:6:"boxton";b:0;s:16:"bartlett_flipped";b:0;s:8:"bartlett";b:0;s:26:"minipanel-two-columns-wide";b:0;s:20:"minipanel-one-column";b:0;s:21:"gsb-standard-page-two";b:1;s:29:"gsb-landing-standard-page-one";b:1;s:18:"gsb-landing-events";b:1;s:14:"gsb-front-page";b:0;s:21:"gsb-business-insights";b:0;}s:10:"form_state";N;}';
+  $export['panelizer_node:page_allowed_layouts'] = $strongarm;
+
+  $strongarm = new stdClass();
+  $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
+  $strongarm->api_version = 1;
+  $strongarm->name = 'panelizer_node:page_allowed_layouts_default';
+  $strongarm->value = 0;
+  $export['panelizer_node:page_allowed_layouts_default'] = $strongarm;
+
+  $strongarm = new stdClass();
+  $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
+  $strongarm->api_version = 1;
   $strongarm->name = 'panelizer_node:page_allowed_types_default';
   $strongarm->value = 1;
   $export['panelizer_node:page_allowed_types_default'] = $strongarm;
+
+  $strongarm = new stdClass();
+  $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
+  $strongarm->api_version = 1;
+  $strongarm->name = 'panelizer_node:page_default';
+  $strongarm->value = array(
+    'other' => 'other',
+    'token' => 'token',
+    'entity_field_extra' => 'entity_field_extra',
+    'entity_field' => 'entity_field',
+    'block' => 'block',
+    'entity_form_field' => 'entity_form_field',
+    'custom' => 'custom',
+    'entity_view' => 'entity_view',
+    'fieldable_panels_pane' => 'fieldable_panels_pane',
+    'menu_tree' => 'menu_tree',
+    'panels_mini' => 'panels_mini',
+    'views_panes' => 'views_panes',
+  );
+  $export['panelizer_node:page_default'] = $strongarm;
 
   $strongarm = new stdClass();
   $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
@@ -1375,6 +1430,16 @@ function gsb_feature_page_ct_strongarm() {
   $strongarm->name = 'workbench_moderation_default_state_page';
   $strongarm->value = 'draft';
   $export['workbench_moderation_default_state_page'] = $strongarm;
+
+  $strongarm = new stdClass();
+  $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
+  $strongarm->api_version = 1;
+  $strongarm->name = 'xmlsitemap_settings_node_page';
+  $strongarm->value = array(
+    'status' => '1',
+    'priority' => '0.5',
+  );
+  $export['xmlsitemap_settings_node_page'] = $strongarm;
 
   return $export;
 }

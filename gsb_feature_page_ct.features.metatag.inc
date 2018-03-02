@@ -13,6 +13,7 @@ function gsb_feature_page_ct_metatag_export_default() {
   // Exported Metatag config instance: node:page.
   $config['node:page'] = array(
     'instance' => 'node:page',
+    'disabled' => FALSE,
     'config' => array(
       'title' => array(
         'value' => '[node:title] | [site:name]',
