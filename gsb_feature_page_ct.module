@@ -141,18 +141,30 @@ function gsb_feature_page_ct_page_alter(&$page) {
           if ($find_current_page !== false) {
             $metatag_result    = str_replace('[current-page:title]', $node->title, $metatag_token_parts[0]);
           }
-          $title = $page['content']['metatags']['node:page']['title']['#attached']['metatag_set_preprocess_variable'][0][2];
-          $title_parts = explode('|', $title);
-          $title = trim($metatag_result) .' | ' . trim($title_parts[1]);
-          $page['content']['metatags']['node:page']['title']['#attached']['metatag_set_preprocess_variable'][0][2] = $title;
+          $title = '';
+          if (!empty($page['content']['metatags']['global']['title']['#attached']['metatag_set_preprocess_variable'])) {
+            $title = $page['content']['metatags']['global']['title']['#attached']['metatag_set_preprocess_variable'][0][2];
+            $title_parts = explode('|', $title);
+            $title = trim($metatag_result) .' | ' . trim($title_parts[1]);
+          }
+          if (!empty($page['content']['metatags']['node:page']['title']['#attached']['metatag_set_preprocess_variable'])) {
+            $page['content']['metatags']['node:page']['title']['#attached']['metatag_set_preprocess_variable'][0][2] = $title;
+          }
         }
         else
         {
-          $title = $page['content']['metatags']['node:page']['title']['#attached']['metatag_set_preprocess_variable'][0][2];
-          $title = str_replace($node->title, '', $title);
-          $title_parts = explode('|', $title);
-          $title = trim($title_parts[0]) . ' ' . $node->title . ' | ' . trim($title_parts[1]);
-          $page['content']['metatags']['node:page']['title']['#attached']['metatag_set_preprocess_variable'][0][2] = $title;
+          if (!empty($page['content']['metatags'])) {
+            $title = '';
+            if (!empty($page['content']['metatags']['node:page']['title']['#attached']['metatag_set_preprocess_variable'])) {
+              $title = $page['content']['metatags']['node:page']['title']['#attached']['metatag_set_preprocess_variable'][0][2];
+              $title = str_replace($node->title, '', $title);
+              $title_parts = explode('|', $title);
+              $title = trim($title_parts[0]) . ' ' . $node->title . ' | ' . trim($title_parts[1]);
+            }
+            if (!empty($page['content']['metatags']['node:page']['title']['#attached']['metatag_set_preprocess_variable'])) {
+              $page['content']['metatags']['node:page']['title']['#attached']['metatag_set_preprocess_variable'][0][2] = $title;
+            }
+          }
         }
     }
   }
