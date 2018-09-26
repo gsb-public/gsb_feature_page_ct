@@ -132,40 +132,36 @@ function gsb_feature_page_ct_page_alter(&$page) {
     drupal_add_js(drupal_get_path('module', 'gsb_feature_page_ct') . '/js/gsb_feature_page_ct_slideshow_slick.js');
     $node = menu_get_object();
     if ($node && $node->type == 'page') {
-        drupal_set_title($node->title);
-        $metatag_token = empty($node->metatags['und']['title']['value']) ? "" : $node->metatags['und']['title']['value'];
-        if ($metatag_token != "") {
-          $metatag_token_parts = explode('|', $metatag_token);
-          $metatag_result      = str_replace('[node:title]', $node->title, $metatag_token_parts[0]);
-          $find_current_page   = strpos($metatag_result, '[current-page:title]');
-          if ($find_current_page !== false) {
-            $metatag_result    = str_replace('[current-page:title]', $node->title, $metatag_token_parts[0]);
-          }
+      drupal_set_title($node->title);
+      $metatag_token = empty($node->metatags['und']['title']['value']) ? "" : $node->metatags['und']['title']['value'];
+      if ($metatag_token != "") {
+        $metatag_token_parts = explode('|', $metatag_token);
+        $metatag_result      = str_replace('[node:title]', $node->title, $metatag_token_parts[0]);
+        $find_current_page   = strpos($metatag_result, '[current-page:title]');
+        if ($find_current_page !== false) {
+          $metatag_result    = str_replace('[current-page:title]', $node->title, $metatag_token_parts[0]);
+        }
+        $title = '';
+        if (!empty($page['content']['metatags']['node:page']['title']['#attached']['metatag_set_preprocess_variable'])) {
+          $title = $page['content']['metatags']['node:page']['title']['#attached']['metatag_set_preprocess_variable'][0][2];
+          $title_parts = explode('|', $title);
+          $title = trim($metatag_result) .' | ' . trim($title_parts[1]);
+          $page['content']['metatags']['node:page']['title']['#attached']['metatag_set_preprocess_variable'][0][2] = $title;
+        }
+      }
+      else
+      {
+        if (!empty($page['content']['metatags'])) {
           $title = '';
-          if (!empty($page['content']['metatags']['global']['title']['#attached']['metatag_set_preprocess_variable'])) {
-            $title = $page['content']['metatags']['global']['title']['#attached']['metatag_set_preprocess_variable'][0][2];
-            $title_parts = explode('|', $title);
-            $title = trim($metatag_result) .' | ' . trim($title_parts[1]);
-          }
           if (!empty($page['content']['metatags']['node:page']['title']['#attached']['metatag_set_preprocess_variable'])) {
+            $title = $page['content']['metatags']['node:page']['title']['#attached']['metatag_set_preprocess_variable'][0][2];
+            $title = str_replace($node->title, '', $title);
+            $title_parts = explode('|', $title);
+            $title = trim($title_parts[0]) . ' ' . $node->title . ' | ' . trim($title_parts[1]);
             $page['content']['metatags']['node:page']['title']['#attached']['metatag_set_preprocess_variable'][0][2] = $title;
           }
         }
-        else
-        {
-          if (!empty($page['content']['metatags'])) {
-            $title = '';
-            if (!empty($page['content']['metatags']['node:page']['title']['#attached']['metatag_set_preprocess_variable'])) {
-              $title = $page['content']['metatags']['node:page']['title']['#attached']['metatag_set_preprocess_variable'][0][2];
-              $title = str_replace($node->title, '', $title);
-              $title_parts = explode('|', $title);
-              $title = trim($title_parts[0]) . ' ' . $node->title . ' | ' . trim($title_parts[1]);
-            }
-            if (!empty($page['content']['metatags']['node:page']['title']['#attached']['metatag_set_preprocess_variable'])) {
-              $page['content']['metatags']['node:page']['title']['#attached']['metatag_set_preprocess_variable'][0][2] = $title;
-            }
-          }
-        }
+      }
     }
   }
 }
